@@ -28,19 +28,12 @@ def string_checker(question, valid_ans):
 
 # displays the instructions
 def instructions_text():
-    print('''
-
-    ✊✌️✋ Instructions ✊✌️✋
-
-To begin, choose the number of rounds (or press <enter> for infinite mode).
-Then play against the computer. YOu can choose between R (rock), P (paper) or S (scissors).
-The rules are as follows:
-- Paper beats rock
-- Rock beats scissors
-- Scissors beats paper
+    print('''To begin, choose the number of rounds (or press <enter> for infinite mode).
+You will then chose a lower and higher number (inclusive) that will contain your secret number 
+You will then try to guess the number while the computer will give you hints for each guess
+You will receive statistics on your guesses used and will be able to see your game history at the end of the game 
 Type <quit> to end the game at anytime.
-
-    ''')
+🎂🎂🎂Good Luck🎂🎂🎂''')
 
 
 # checks if the integer is infinite or more than one for nuber of rounds
@@ -48,7 +41,7 @@ Type <quit> to end the game at anytime.
 
 def int_check(question, low=None, high=None, exit_code=None):
     # if any integer is allowed
-    if low is None and high is not None:
+    if low is None and high is None:
         error = "Please enter an integer"
 
     elif low is not None and high is None:
@@ -183,3 +176,6 @@ history = string_checker("do you want to see your history? ", ["yes", "no"])
 if history == "yes":
     for item in game_history:
         print(item)
+
+print()
+print("thank you for playing higher or lower")
